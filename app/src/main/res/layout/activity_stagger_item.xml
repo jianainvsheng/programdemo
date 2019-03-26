@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/fragment_home_stagger_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.source.sdk.widget.stagger.util.DynamicHeightImageView
+            android:id="@+id/fragment_home_stagger_item_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:riv_corner_radius_top_left="5dp"
+            app:riv_corner_radius_bottom_right="5dp"
+            app:riv_corner_radius_top_right="5dp"
+            app:riv_corner_radius_bottom_left="5dp"
+            app:riv_border_width="0dip"
+            app:riv_oval="false"
+            android:src="@drawable/image_1"
+            app:riv_border_color="#00000000"
+            android:scaleType="fitXY"/>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/levelprocess_activity"
+    android:fitsSystemWindows="true">
+
+    <com.source.sdk.widget.leve.LevelProgressBar
+        android:id="@+id/user_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:progressBgColor="#00ff00"
+        app:progressEndColor="#FA556F"
+        app:progressHeight="8dp"
+        app:progressStartColor="#8129F5" />
+</RelativeLayout>

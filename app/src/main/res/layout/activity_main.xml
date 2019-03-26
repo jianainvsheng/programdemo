@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/main"
+    android:layout_height="match_parent"
+    tools:context="com.source.sdk.main.MainActivity">
+
+    <com.source.sdk.widget.smartlayout.SmartRefreshLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/widget_refreshLayout_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        app:srlEnableFooterFollowWhenLoadFinished="false">
+
+        <ListView
+            android:id="@+id/widget_listview_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:divider="#FF00FF"
+            android:dividerHeight="1dp"
+            />
+    </com.source.sdk.widget.smartlayout.SmartRefreshLayout>
+</RelativeLayout>

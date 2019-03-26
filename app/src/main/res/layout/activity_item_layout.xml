@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_detail_comment_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#000000"
+    tools:ignore="ResourceName">
+
+    <com.source.sdk.widget.roundimageview.RoundImageView
+        android:id="@+id/activity_comment_item_tale_img"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="17dp"
+        android:src="@mipmap/ic_launcher"
+        app:border_color="#FFFFFF"
+        app:border_width="1dp" />
+
+    <TextView
+        android:id="@+id/activity_comment_item_tale_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/activity_comment_item_tale_img"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/activity_comment_item_tale_img"
+        android:textColor="#FC4665"
+        android:text="sadsadas"
+        android:textSize="12sp" />
+
+    <com.source.sdk.widget.rating.StarBar
+        android:id="@+id/activity_comment_item_tale_starBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_comment_item_tale_name"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/activity_comment_item_tale_img"
+        app:isTouch="false"
+        app:starCount="5"
+        app:starDistance="3dp"
+        app:starEmpty="@drawable/detail_comment_unfocus"
+        app:starFill="@drawable/detail_comment_focus"
+        app:starSize="13dp" />
+
+    <TextView
+        android:id="@+id/activity_comment_item_tale_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/activity_comment_item_tale_img"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#CCFFFFFF"
+        android:textSize="10sp" />
+
+</RelativeLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_beziesearch"
+    >
+
+    <LinearLayout
+        android:id="@+id/test_edit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/psearch_topsearch_layout_shap"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/home_top_searchlayout_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="8dp"
+            android:src="@mipmap/gomeplus_searchar_magnifyingglass" />
+
+        <com.source.sdk.widget.search.SearchScrollView
+            android:id="@+id/home_top_searchlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="30dp"
+
+            />
+        <TextView
+            android:id="@+id/home_top_search_text_default"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:hint="搜索商品"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/test_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:layout_below="@+id/test_edit_layout"
+
+        />
+
+    <TextView
+        android:id="@+id/test_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World! two"
+        android:layout_below="@+id/test_one"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="30dp"
+
+        />
+
+    <TextView
+        android:id="@+id/test_thress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World! thress"
+        android:layout_below="@+id/test_two"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="150dp"
+
+        />
+
+    <TextView
+        android:id="@+id/test_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World! four 测试测试测试测试"
+        android:layout_below="@+id/test_thress"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="200dp"
+
+        />
+
+</RelativeLayout>
