@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.source.sdk.R;
 import com.source.sdk.addcat.holder.AddCatHolder;
+import com.source.sdk.annotaion.IActivity;
 import com.source.sdk.base.BaseMvpNormalView;
 import com.source.sdk.base.holder.BaseSubscriberActivity;
 import com.source.sdk.common.holder.annotation.IHolder;
@@ -18,6 +19,7 @@ import com.source.sdk.common.mvp.MvpBasePresenter;
 
         resId = R.id.activity_addcat,holderClass = AddCatHolder.class
 ))
+@IActivity(value = "/source/AddCatActivity")
 public class AddCatActivity extends BaseSubscriberActivity<BaseMvpNormalView,MvpBasePresenter<BaseMvpNormalView>> implements BaseMvpNormalView{
 
     @Override

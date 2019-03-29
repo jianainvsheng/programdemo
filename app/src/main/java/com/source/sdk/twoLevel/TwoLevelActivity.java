@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.view.View;
 
 import com.source.sdk.R;
+import com.source.sdk.annotaion.IActivity;
 import com.source.sdk.base.BaseMvpNormalView;
 import com.source.sdk.base.holder.BaseSubscriberActivity;
 import com.source.sdk.common.holder.annotation.IHolder;
@@ -18,6 +19,7 @@ import com.source.sdk.twoLevel.holder.TwoLevelHolder;
 
         resId = R.id.activity_two_level,holderClass = TwoLevelHolder.class
 ))
+@IActivity(value = "/source/TwoLevelActivity")
 public class TwoLevelActivity extends BaseSubscriberActivity<BaseMvpNormalView,MvpBasePresenter<BaseMvpNormalView>> implements BaseMvpNormalView {
 
     @Override

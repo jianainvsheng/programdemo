@@ -15,6 +15,13 @@
         app:indicator_drawable_selected="@drawable/activity_banner_focus_radius"
         app:indicator_drawable_unselected="@drawable/activity_banne_unfocus_radius"
         />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_below="@+id/hot_top_banner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"/>
 </RelativeLayout>
 
 

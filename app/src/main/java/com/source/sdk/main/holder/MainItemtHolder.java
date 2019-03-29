@@ -1,26 +1,16 @@
 package com.source.sdk.main.holder;
-import android.content.Intent;
 import android.support.v7.widget.GridLayoutManager;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.source.sdk.R;
-import com.source.sdk.addcat.AddCatActivity;
-import com.source.sdk.banneractivity.BannerActivity;
-import com.source.sdk.beziesearch.BezieSearchActivity;
 import com.source.sdk.common.holder.holder.BaseHolder;
-import com.source.sdk.leveprogress.LeveProcessActivity;
-import com.source.sdk.magicindicator.MagicIndicatorActivity;
 import com.source.sdk.main.modle.MainItemModel;
-import com.source.sdk.popuopactivity.PopupActivity;
-import com.source.sdk.stagger.StaggerActivity;
-import com.source.sdk.twoLevel.TwoLevelActivity;
+import com.source.sdk.prouter.PRouter;
 import com.source.sdk.widget.fullmanager.FullyGridLayoutManager;
 import com.source.sdk.widget.rating.StarBar;
 import com.source.sdk.widget.slidelayout.SlideLayout;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -116,29 +106,21 @@ public class MainItemtHolder extends BaseHolder<MainItemModel> implements View.O
         }else if(v == mUserName){
 
             if(getPosition() == 0){
-                Intent intent = new Intent(getContext(), PopupActivity.class);
-                getContext().startActivity(intent);
+                PRouter.getInstance().navigation(getContentView(),"/source/PopupActivity");
             }else if(getPosition() == 1){
-                Intent intent = new Intent(getContext(), BannerActivity.class);
-                getContext().startActivity(intent);
+                PRouter.getInstance().navigation(getContentView(),"/source/BannerActivity");
             }else if(getPosition() == 2){
-                Intent intent = new Intent(getContext(), LeveProcessActivity.class);
-                getContext().startActivity(intent);
+                PRouter.getInstance().navigation(getContentView(),"/source/LeveProcessActivity");
             }else if(getPosition() == 3){
-                Intent intent = new Intent(getContext(), BezieSearchActivity.class);
-                getContext().startActivity(intent);
+                PRouter.getInstance().navigation(getContentView(),"/source/BezieSearchActivity");
             }else if(getPosition() == 4){
-                Intent intent = new Intent(getContext(), AddCatActivity.class);
-                getContext().startActivity(intent);
+                PRouter.getInstance().navigation(getContentView(),"/source/AddCatActivity");
             }else if(getPosition() == 5){
-                Intent intent = new Intent(getContext(), MagicIndicatorActivity.class);
-                getContext().startActivity(intent);
+                PRouter.getInstance().navigation(getContentView(),"/source/MagicIndicatorActivity");
             }else if(getPosition() == 6){
-                Intent intent = new Intent(getContext(), StaggerActivity.class);
-                getContext().startActivity(intent);
+                PRouter.getInstance().navigation(getContentView(),"/source/StaggerActivity");
             }else if(getPosition() == 7){
-                Intent intent = new Intent(getContext(), TwoLevelActivity.class);
-                getContext().startActivity(intent);
+                PRouter.getInstance().navigation(getContentView(),"/source/TwoLevelActivity");
             }
         }
     }

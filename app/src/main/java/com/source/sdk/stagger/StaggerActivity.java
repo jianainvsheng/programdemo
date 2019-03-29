@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.view.View;
 
 import com.source.sdk.R;
+import com.source.sdk.annotaion.IActivity;
 import com.source.sdk.base.holder.BaseSubscriberActivity;
 import com.source.sdk.common.holder.annotation.IHolder;
 import com.source.sdk.common.holder.annotation.internal.IHolderInfo;
@@ -22,6 +23,7 @@ import com.source.sdk.stagger.presenter.StaggerPresenter;
 @IHolder(
         holders = @IHolderInfo(holderClass = StaggerHolder.class,resId = R.id.widget_refreshLayout_layout)
 )
+@IActivity(value = "/source/StaggerActivity")
 public class StaggerActivity extends BaseSubscriberActivity<StaggerContact.StaggerView,StaggerPresenter> implements StaggerContact.StaggerView{
 
     private StaggerRequest mRequest;

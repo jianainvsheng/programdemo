@@ -6,6 +6,8 @@ import android.support.annotation.Nullable;
 import android.view.View;
 
 import com.source.sdk.R;
+import com.source.sdk.annotaion.IActivity;
+import com.source.sdk.banneractivity.holder.BannerBottomHolder;
 import com.source.sdk.banneractivity.holder.BannerHolder;
 import com.source.sdk.banneractivity.model.BannerModel;
 import com.source.sdk.banneractivity.present.BannerContact;
@@ -18,10 +20,15 @@ import com.source.sdk.common.holder.eventmanger.internal.event.BaseEvent;
 /**
  * Created by yangjian on 2019/3/15.
  */
-@IHolder(holders = @IHolderInfo(
-        holderClass = BannerHolder.class,resId = R.id.activity_banner
-))
-public class BannerActivity extends BaseSubscriberActivity<BannerContact.BannerView,BannerPresenter> implements BannerContact.BannerView{
+@IHolder(holders = {@IHolderInfo(
+        holderClass = BannerHolder.class, resId = R.id.activity_banner
+),
+        @IHolderInfo(
+                holderClass = BannerBottomHolder.class, resId = R.id.activity_banner
+        )
+})
+@IActivity(value = "/source/BannerActivity")
+public class BannerActivity extends BaseSubscriberActivity<BannerContact.BannerView, BannerPresenter> implements BannerContact.BannerView {
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -56,7 +63,7 @@ public class BannerActivity extends BaseSubscriberActivity<BannerContact.BannerV
 
         BaseEvent.builder(this)
                 .setData(model)
-                .sendEvent(this,BannerHolder.class);
+                .sendEvent(this, BannerHolder.class);
     }
 
     @Override

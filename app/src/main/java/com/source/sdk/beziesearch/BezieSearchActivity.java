@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.view.View;
 
 import com.source.sdk.R;
+import com.source.sdk.annotaion.IActivity;
 import com.source.sdk.base.BaseMvpNormalView;
 import com.source.sdk.base.holder.BaseSubscriberActivity;
 import com.source.sdk.beziesearch.holder.BezieSearchHolder;
@@ -18,6 +19,7 @@ import com.source.sdk.common.mvp.MvpBasePresenter;
 
         resId = R.id.activity_beziesearch,holderClass = BezieSearchHolder.class
 ))
+@IActivity(value = "/source/BezieSearchActivity")
 public class BezieSearchActivity extends BaseSubscriberActivity<BaseMvpNormalView,MvpBasePresenter<BaseMvpNormalView>> implements BaseMvpNormalView {
 
     @Override

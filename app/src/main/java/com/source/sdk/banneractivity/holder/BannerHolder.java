@@ -1,5 +1,6 @@
 package com.source.sdk.banneractivity.holder;
 
+import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.Toast;
 
@@ -46,5 +47,18 @@ public class BannerHolder extends BaseSubscriberHolder<BannerModel>implements On
     public void OnBannerClick(int i) {
         //点击
         Toast.makeText(getContext(),"position : " + i,Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onMessageEvent(BaseEvent event) {
+        super.onMessageEvent(event);
+        if(event.getFromClass() == BannerBottomHolder.class){
+
+            if(event.getEventType() == BannerBottomHolder.EVENT_TRANSFORMER_CHANGE){
+
+                Class<? extends ViewPager.PageTransformer> tran = (Class<? extends ViewPager.PageTransformer>) event.getData();
+                mBanner.setBannerAnimation(tran);
+            }
+        }
     }
 }

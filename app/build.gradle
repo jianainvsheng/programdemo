@@ -1,5 +1,9 @@
 apply plugin: 'com.android.application'
-
+apply plugin: "com.plugin.router"
+routerExt{
+    debug true
+    packgets "com/source/sdk"
+}
 android {
     compileSdkVersion 26
     defaultConfig {
@@ -8,7 +12,6 @@ android {
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -16,17 +19,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:26.0.0-beta1'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:0.5'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
     implementation 'com.source.common:common:1.0.3'
     implementation 'com.source.widget:widget:1.0.6'
     implementation 'org.greenrobot:eventbus:3.1.1'
     implementation 'com.jakewharton:butterknife:8.4.0'
+    implementation 'com.source.router:router:1.0.1'
 }

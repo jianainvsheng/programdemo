@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.view.View;
 
 import com.source.sdk.R;
+import com.source.sdk.annotaion.IActivity;
 import com.source.sdk.base.BaseMvpNormalView;
 import com.source.sdk.base.holder.BaseSubscriberActivity;
 import com.source.sdk.common.holder.annotation.IHolder;
@@ -21,6 +22,7 @@ import com.source.sdk.magicindicator.holder.MagicHolder;
 
         resId = R.id.activity_magic_indicator,holderClass = MagicHolder.class
 ))
+@IActivity(value = "/source/MagicIndicatorActivity")
 public class MagicIndicatorActivity extends BaseSubscriberActivity<BaseMvpNormalView,MvpBasePresenter<BaseMvpNormalView>> implements BaseMvpNormalView {
 
     @Override
